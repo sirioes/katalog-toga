@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TOGA - Tanaman Obat Keluarga</string>
+    <string name="hint_cari">Cari tanaman obat...</string>
+    <string name="label_kategori">Kategori</string>
+    <string name="label_manfaat">Manfaat</string>
+    <string name="label_cara_penggunaan">Cara Penggunaan</string>
+    <string name="label_peringatan">Peringatan</string>
+    <string name="btn_kembali">← Kembali</string>
+    <string name="btn_sort_az">A → Z</string>
+    <string name="btn_sort_za">Z → A</string>
+    <string name="sort_label">Urutkan:</string>
+    <string name="jumlah_tanaman">15 Tanaman Herbal Pilihan</string>
+</resources>
