@@ -1,47 +1,75 @@
 package com.example.katalog_toga
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.katalog_toga.ui.theme.KatalogtogaTheme
+// import android.widget.Button
+// import android.widget.EditText
+// import androidx.core.widget.addTextChangedListener
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
-class MainActivity : ComponentActivity() {
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var adapter: TanamanAdapter
+    private val listTanaman = DataTanaman.getAll()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContent {
-            KatalogtogaTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+        setContentView(R.layout.activity_main)
+
+        val rvTanaman = findViewById<RecyclerView>(R.id.rvTanaman)
+
+        // Intent: perpindahan ke DetailActivity saat item diklik
+        adapter = TanamanAdapter(listTanaman) { tanaman ->
+            val intent = Intent(this, DetailActivity::class.java).apply {
+                putExtra("NAMA", tanaman.nama)
+                putExtra("NAMA_LATIN", tanaman.namaLatin)
+                putExtra("EMOJI", tanaman.emoji)
+                putExtra("KATEGORI", tanaman.kategori)
+                putExtra("ASAL", tanaman.asal)
+                putExtra("MANFAAT", tanaman.manfaat)
+                putExtra("BAGIAN", tanaman.bagian)
+                putExtra("CARA", tanaman.caraPenggunaan)
+                putExtra("PERINGATAN", tanaman.peringatan)
             }
+            startActivity(intent)
         }
-    }
-}
+        rvTanaman.layoutManager = GridLayoutManager(this, 2)
+        rvTanaman.adapter = adapter
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
+        // =====================================================
+        // FITUR BELUM AKTIF
+        // =====================================================
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    KatalogtogaTheme {
-        Greeting("Android")
+        // val etCari = findViewById<EditText>(R.id.etCari)
+        // val btnSortAZ = findViewById<Button>(R.id.btnSortAZ)
+        // val btnSortZA = findViewById<Button>(R.id.btnSortZA)
+
+        // Validasi if-else pada kolom pencarian
+        // etCari.addTextChangedListener { text ->
+        //     val query = text.toString().trim()
+        //     if (query.isEmpty()) {
+        //         adapter.updateData(DataTanaman.getAll())
+        //     } else {
+        //         val hasil = DataTanaman.getAll().filter {
+        //             it.nama.contains(query, ignoreCase = true) ||
+        //             it.kategori.contains(query, ignoreCase = true)
+        //         }.toMutableList()
+        //         adapter.updateData(hasil)
+        //     }
+        // }
+
+        // Tombol Sort A→Z
+        // btnSortAZ.setOnClickListener {
+        //     val sorted = adapter.getCurrentList().sortedBy { it.nama }.toMutableList()
+        //     adapter.updateData(sorted)
+        // }
+
+        // Tombol Sort Z→A
+        // btnSortZA.setOnClickListener {
+        //     val sorted = adapter.getCurrentList().sortedByDescending { it.nama }.toMutableList()
+        //     adapter.updateData(sorted)
+        // }
     }
 }
