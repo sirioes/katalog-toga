@@ -43,7 +43,7 @@
             android:paddingEnd="8dp">
 
             <TextView
-                android:id="@+id/tvNamaTanaman"
+                android:id="@+id/tvNama"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Jahe"
@@ -62,17 +62,6 @@
                 android:fontFamily="sans-serif"
                 android:textStyle="italic"
                 android:layout_marginTop="2dp" />
-
-            <TextView
-                android:id="@+id/tvManfaatSingkat"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Meredakan mual, anti-inflamasi"
-                android:textColor="@color/text_secondary"
-                android:textSize="12sp"
-                android:layout_marginTop="4dp"
-                android:maxLines="1"
-                android:ellipsize="end" />
 
             <TextView
                 android:id="@+id/tvKategori"

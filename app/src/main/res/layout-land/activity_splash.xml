@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="@color/green_dark"
+    android:padding="40dp"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌿"
+            android:textSize="80sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TOGA"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            android:letterSpacing="0.15" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanaman Obat Keluarga"
+            android:textColor="@color/green_light"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif"
+            android:layout_marginTop="6dp" />
+
+        <View
+            android:layout_width="60dp"
+            android:layout_height="2dp"
+            android:background="@color/green_light"
+            android:alpha="0.5"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Katalog Herbal Nusantara"
+            android:textColor="@color/green_light"
+            android:textSize="12sp"
+            android:alpha="0.7" />
+
+    </LinearLayout>
+
+</LinearLayout>
