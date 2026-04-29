@@ -39,4 +39,6 @@ class TanamanAdapter(
         list = newList
         notifyDataSetChanged()
     }
+
+    fun getCurrentList(): MutableList<Tanaman> = list
 }

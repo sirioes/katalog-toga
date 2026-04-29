@@ -44,13 +44,15 @@
 
             <TextView
                 android:id="@+id/tvNama"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Jahe"
                 android:textColor="@color/text_dark"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:fontFamily="sans-serif-medium" />
+                android:fontFamily="sans-serif-medium"
+                android:maxLines="1"
+                android:ellipsize="end" />
 
             <TextView
                 android:id="@+id/tvNamaLatin"
