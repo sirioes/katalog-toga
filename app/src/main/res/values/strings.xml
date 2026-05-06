@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">TOGA - Tanaman Obat Keluarga</string>
+    <string name="app_name">TOGA</string>
     <string name="hint_cari">Cari tanaman obat...</string>
     <string name="label_kategori">Kategori</string>
     <string name="label_manfaat">Manfaat</string>
