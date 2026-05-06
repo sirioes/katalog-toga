@@ -2,9 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/rootLayout"
     android:orientation="horizontal"
-    android:background="@color/bg_primary"
-    android:fitsSystemWindows="true">
+    android:background="@color/green_dark">
 
     <LinearLayout
         android:layout_width="280dp"
@@ -102,7 +102,7 @@
                 android:layout_weight="1"
                 android:text="A → Z"
                 android:textSize="11sp"
-                android:backgroundTint="@color/green_accent"
+                android:backgroundTint="@color/green_medium"
                 android:textColor="@color/white"
                 android:layout_marginEnd="6dp"
                 style="@style/Widget.MaterialComponents.Button" />
