@@ -11,4 +11,10 @@
     <string name="btn_sort_za">Z → A</string>
     <string name="sort_label">Urutkan:</string>
     <string name="jumlah_tanaman">Katalog Tanaman Obat Keluarga</string>
+    <string name="splash_emoji">🌿</string>
+    <string name="splash_subtitle">Tanaman Obat Keluarga</string>
+    <string name="splash_tagline">Katalog Herbal Nusantara</string>
+    <string name="header_title">🌿 TOGA</string>
+    <string name="app_tagline">Tanaman Obat Keluarga</string>
+    <string name="empty_state_message">Tanaman obat keluarga tidak ditemukan</string>
 </resources>

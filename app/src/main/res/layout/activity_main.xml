@@ -21,7 +21,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="🌿 TOGA"
+            android:text="@string/header_title"
             android:textColor="@color/white"
             android:textSize="12sp"
             android:letterSpacing="0.15"
@@ -30,7 +30,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tanaman Obat Keluarga"
+            android:text="@string/app_tagline"
             android:textColor="@color/white"
             android:textSize="22sp"
             android:textStyle="bold"
@@ -39,7 +39,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Katalog Tanaman Obat Keluarga"
+            android:text="@string/jumlah_tanaman"
             android:textColor="@color/green_light"
             android:textSize="12sp"
             android:layout_marginTop="2dp" />
@@ -66,7 +66,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@null"
-                android:hint="Cari tanaman obat..."
+                android:hint="@string/hint_cari"
                 android:textColorHint="@color/hint_color"
                 android:textColor="@color/text_dark"
                 android:textSize="14sp"
@@ -93,7 +93,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Urutkan:"
+            android:text="@string/sort_label"
             android:textColor="@color/text_secondary"
             android:textSize="13sp" />
 
@@ -101,7 +101,7 @@
             android:id="@+id/btnSortAZ"
             android:layout_width="wrap_content"
             android:layout_height="34dp"
-            android:text="A → Z"
+            android:text="@string/btn_sort_az"
             android:textSize="12sp"
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
@@ -114,7 +114,7 @@
             android:id="@+id/btnSortZA"
             android:layout_width="wrap_content"
             android:layout_height="34dp"
-            android:text="Z → A"
+            android:text="@string/btn_sort_za"
             android:textSize="12sp"
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
@@ -155,7 +155,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tanaman obat keluarga tidak ditemukan"
+            android:text="@string/empty_state_message"
             android:textColor="@color/text_secondary"
             android:textSize="14sp"
             android:textStyle="italic"

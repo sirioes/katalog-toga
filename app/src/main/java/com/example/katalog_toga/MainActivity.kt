@@ -46,23 +46,19 @@ class MainActivity : AppCompatActivity() {
         // Intent: perpindahan ke DetailActivity saat item diklik
         try {
             adapter = TanamanAdapter(listTanaman) { tanaman ->
-                try {
-                    Log.i(TAG, "MainActivity: item diklik -> ${tanaman.nama}")
-                    val intent = Intent(this, DetailActivity::class.java).apply {
-                        putExtra("NAMA", tanaman.nama)
-                        putExtra("NAMA_LATIN", tanaman.namaLatin)
-                        putExtra("EMOJI", tanaman.emoji)
-                        putExtra("KATEGORI", tanaman.kategori)
-                        putExtra("ASAL", tanaman.asal)
-                        putExtra("MANFAAT", tanaman.manfaat)
-                        putExtra("BAGIAN", tanaman.bagian)
-                        putExtra("CARA", tanaman.caraPenggunaan)
-                        putExtra("PERINGATAN", tanaman.peringatan)
-                    }
-                    startActivity(intent)
-                } catch (e: Exception) {
-                    Log.e(TAG, "MainActivity: gagal membuka DetailActivity - ${e.message}", e)
+                Log.i(TAG, "MainActivity: item diklik -> ${tanaman.nama}")
+                val intent = Intent(this, DetailActivity::class.java).apply {
+                    putExtra("NAMA", tanaman.nama)
+                    putExtra("NAMA_LATIN", tanaman.namaLatin)
+                    putExtra("EMOJI", tanaman.emoji)
+                    putExtra("KATEGORI", tanaman.kategori)
+                    putExtra("ASAL", tanaman.asal)
+                    putExtra("MANFAAT", tanaman.manfaat)
+                    putExtra("BAGIAN", tanaman.bagian)
+                    putExtra("CARA", tanaman.caraPenggunaan)
+                    putExtra("PERINGATAN", tanaman.peringatan)
                 }
+                startActivity(intent)
             }
             rvTanaman.layoutManager = GridLayoutManager(this, 2)
             rvTanaman.adapter = adapter
